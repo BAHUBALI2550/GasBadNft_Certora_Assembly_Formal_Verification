@@ -41,5 +41,5 @@ aderyn :; aderyn .
 
 certoraSingle :; certoraRun NftMock.sol --verify NftMock:certora/spec/NftMock.spec --solc solc8.20 --msg "Verifying by CLI instead of conf"
 certoraNft :;  certoraRun ./certora/conf/NftMock.conf
-certora :;  certoraRun certora/conf/GasBadNft.conf
+certora :;  certoraRun certora/conf/GasBadNft.conf --optimistic_fallback
 certoraSingleRule :;  certoraRun certora/conf/GasBadNft.conf --rule calling_any_function_should_result_in_each_contract_having_the_same_state
